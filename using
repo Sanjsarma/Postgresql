@@ -1,0 +1,11 @@
+To switch to postgres account:
+sudo -i -u postgres
+
+Access psql: 
+psql
+
+Exit psql:
+\q
+
+Exit postgres account:
+exit
