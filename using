@@ -9,3 +9,15 @@ Exit psql:
 
 Exit postgres account:
 exit
+
+create another superuser: 
+create user sanj with superuser password ''; (in postgres account)
+
+sudo service postgresql restart;
+
+createdb sanj; (creating db )
+
+psql -U sanj sanj(user sanj's db sanj access)
+
+
+
