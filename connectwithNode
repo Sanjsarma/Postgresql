@@ -1,0 +1,39 @@
+install pgAdmin4
+
+sudo paswd postgress: to set up password
+in psql : create role, createdb
+create user sanjanasarma with password '';
+alter user sanjanasarma with superuser;
+createdb sanjanasarma;
+psql -U sanjanasarma sanjanasarma;
+
+psql -c "ALTER USER postgres PASSWORD '';"
+
+then create server in pgAdmin:
+ 1. Dashboard -> add new server 
+ 2. Give name, go to connection
+ 3. host name/address - localhost, 
+    port: 5432
+    username: postgres
+    password: same as given in alter user
+ 4. save
+DBs can be viewed
+
+#Connect to Node.JS : 
+const {Client} = require('pg');
+onst client = new Client({
+    user: "postgres",
+    password: "", (same as in alter user)
+    host: "localhost",
+    port: 5432,
+    database: "stud"
+
+});
+#Check if connection is working or not
+client.connect()
+.then(() => console.log("Connected successfully"))
+.catch(e => console.log)
+.finally(()=> client.end())
+
+
+
