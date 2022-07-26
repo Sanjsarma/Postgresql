@@ -19,5 +19,17 @@ createdb sanj; (creating db )
 
 psql -U sanj sanj(user sanj's db sanj access)
 
+\l : list of all db
+\du : list of all users
 
+change password: 
+ALTER USER postgres WITH PASSWORD '';
 
+create role:(non-superuser)
+CREATE USER test1 WITH PASSWORD '';
+
+to change to super user:
+ALTER USER test1 with SUPERUSER;
+
+drop role:
+DROP USER test1;
